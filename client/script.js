@@ -6,6 +6,9 @@ let vjm         = require("vue-jwt-mongo");
 let app      = require("./components/app.vue");
 let register = require("./components/register.vue");
 let login    = require("./components/login.vue");
+let index    = require("./components/index.vue");
+let feed     = require("./components/feed.vue");
+let upload   = require("./components/upload.vue");
 
 Vue.use(VueRouter);
 Vue.use(VueResource);
@@ -14,7 +17,10 @@ Vue.use(vjm.Client);
 let router = new VueRouter({
 	routes:[
 		{path:"/register", component: register},
-		{path:"/login", component: login},
+		{path:"/login",    component: login},
+		{path:"/upload",   component: upload},
+		{path:"/feed",     component: feed},
+		{path:"/",         component: index},
 	]
 });
 
